@@ -1,62 +1,44 @@
 version: '2'
 
 services:
-  redis-6371:
+  redis-6379:
     image: redis
-    container_name: redis-6371
+    container_name: redis-6379
     restart: always
     network_mode: 'host'
     volumes:
-      - /home/pcbackend04/Documents/devops/redis-cluster/6371/conf/redis.conf:/usr/local/etc/redis/redis.conf
-      - /home/pcbackend04/Documents/devops/redis-cluster/6371/data:/data
+      - ./6379/conf/redis.conf:/usr/local/etc/redis/redis.conf
+      - ./6379/data:/data
     command: redis-server /usr/local/etc/redis/redis.conf
 
-  redis-6372:
+  redis-6380:
     image: redis
-    container_name: redis-6372
+    container_name: redis-6380
     restart: always
     network_mode: 'host'
     volumes:
-      - /home/pcbackend04/Documents/devops/redis-cluster/6372/conf/redis.conf:/usr/local/etc/redis/redis.conf
-      - /home/pcbackend04/Documents/devops/redis-cluster/6372/data:/data
+      - ./6380/conf/redis.conf:/usr/local/etc/redis/redis.conf
+      - ./6380/data:/data
     command: redis-server /usr/local/etc/redis/redis.conf
 
-  redis-6373:
+  redis-6381:
     image: redis
-    container_name: redis-6373
+    container_name: redis-6381
     restart: always
     network_mode: 'host'
     volumes:
-      - /home/pcbackend04/Documents/devops/redis-cluster/6373/conf/redis.conf:/usr/local/etc/redis/redis.conf
-      - /home/pcbackend04/Documents/devops/redis-cluster/6373/data:/data
+      - ./6381/conf/redis.conf:/usr/local/etc/redis/redis.conf
+      - ./6381/data:/data
     command: redis-server /usr/local/etc/redis/redis.conf
 
-  redis-6374:
+  redis-6382:
     image: redis
-    container_name: redis-6374
+    container_name: redis-6382
     restart: always
     network_mode: 'host'
     volumes:
-      - /home/pcbackend04/Documents/devops/redis-cluster/6374/conf/redis.conf:/usr/local/etc/redis/redis.conf
-      - /home/pcbackend04/Documents/devops/redis-cluster/6374/data:/data
+      - ./6382/conf/redis.conf:/usr/local/etc/redis/redis.conf
+      - ./6382/data:/data
     command: redis-server /usr/local/etc/redis/redis.conf
 
-  redis-6375:
-    image: redis
-    container_name: redis-6375
-    restart: always
-    network_mode: 'host'
-    volumes:
-      - /home/pcbackend04/Documents/devops/redis-cluster/6375/conf/redis.conf:/usr/local/etc/redis/redis.conf
-      - /home/pcbackend04/Documents/devops/redis-cluster/6375/data:/data
-    command: redis-server /usr/local/etc/redis/redis.conf
-
-  redis-6376:
-    image: redis
-    container_name: redis-6376
-    restart: always
-    network_mode: 'host'
-    volumes:
-      - /home/pcbackend04/Documents/devops/redis-cluster/6376/conf/redis.conf:/usr/local/etc/redis/redis.conf
-      - /home/pcbackend04/Documents/devops/redis-cluster/6376/data:/data
-    command: redis-server /usr/local/etc/redis/redis.conf
+ 
