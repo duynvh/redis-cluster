@@ -1,1 +1,5 @@
+docker exec -it redis-6380 bash
+
+cd /usr/local/bin
+
 redis-cli --cluster create 127.0.0.1:6380 127.0.0.1:6381 127.0.0.1:6382 --cluster-replicas 0
